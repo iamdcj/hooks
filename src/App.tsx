@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import BasicToggle from "./Hooks/BasicToggle";
 import Counter from "./Hooks/Counter";
+import Fetch from "./Hooks/Fetch";
 
 const App = () => {
   return (
@@ -17,6 +18,10 @@ const App = () => {
             <li>
               <Link to="/counter">Counter</Link>
             </li>
+
+            <li>
+              <Link to="/fetch">Fetch</Link>
+            </li>
           </ul>
         </nav>
 
@@ -26,6 +31,10 @@ const App = () => {
           </Route>
           <Route path="/counter">
             <Counter />
+          </Route>
+
+          <Route path="/fetch">
+            <Fetch />
           </Route>
         </Switch>
       </main>

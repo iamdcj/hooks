@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-export interface BasicToggleProps {}
+export interface CounterProps {}
 
-const Counter: React.SFC<BasicToggleProps> = () => {
+const Counter: React.SFC<CounterProps> = () => {
   let [count, updateCount] = useState(0);
 
   return (
