@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export interface FetchProps {}
 
@@ -13,12 +13,18 @@ const Fetch: React.SFC<FetchProps> = () => {
       });
   };
 
+  useEffect(() => {
+    fetchItems();
+    return () => {
+      fetchItems();
+    };
+  }, []);
+
   return (
     <div>
       {items.map((i: any) => (
         <div>{i.title}</div>
       ))}
-      <button onClick={fetchItems}>Fetch Items</button>
     </div>
   );
 };
