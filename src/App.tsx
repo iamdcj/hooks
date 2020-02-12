@@ -4,6 +4,7 @@ import "./App.css";
 import BasicToggle from "./Hooks/BasicToggle";
 import Counter from "./Hooks/Counter";
 import Fetch from "./Hooks/Fetch";
+import ReducerFetch from "./Hooks/ReducerFetch";
 
 const App = () => {
   return (
@@ -20,9 +21,11 @@ const App = () => {
             <li>
               <Link to="/counter">Counter</Link>
             </li>
-
             <li>
               <Link to="/fetch">Fetch</Link>
+            </li>
+            <li>
+              <Link to="/reducer-fetch">Reducer Fetch</Link>
             </li>
           </ul>
         </nav>
@@ -37,6 +40,9 @@ const App = () => {
 
           <Route path="/fetch">
             <Fetch />
+          </Route>
+          <Route path="/reducer-fetch">
+            <ReducerFetch />
           </Route>
         </Switch>
       </main>
