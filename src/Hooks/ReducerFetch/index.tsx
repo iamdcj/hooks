@@ -27,6 +27,7 @@ const ReducerFetch: React.SFC<BasicToggleProps> = () => {
 
   return (
     <div>
+      <h1>Fetcher with useReducer</h1>
       {state.loading && "loading"}
       {state.results &&
         state.results.length > 0 &&
