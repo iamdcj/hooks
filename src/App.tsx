@@ -9,6 +9,8 @@ const App = () => {
   return (
     <Router>
       <main>
+        <h1>React Hooks</h1>
+        <p>A declarative way to handle state outside of class components.</p>
         <nav>
           <h3>Hooks Navigation</h3>
           <ul>
