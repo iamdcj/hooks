@@ -32,7 +32,14 @@ const ReducerFetch: React.SFC<BasicToggleProps> = () => {
   return (
     <section>
       <h1>Fetch with useReducer</h1>
-      <p>useReducer is good for handling complex state.</p>
+      <p>The following effects are used in this example:</p>
+      <ul>
+        <li>useEffect - handles fetching when component 'mounts'</li>
+        <li>
+          useReducer - handles the state object mutations when fetch is/isn't
+          successful.
+        </li>
+      </ul>
       {state.loading && "loading"}
       {state.error && "error"}
       {!state.loading &&
