@@ -21,6 +21,7 @@ const Fetch: React.SFC<FetchProps> = () => {
   return (
     <div>
       <h1>Fetcher</h1>
+      <p>The following effects are used in this example:</p>
       <ul>
         <li>
           useEffect hook to handle an async call side-effect when component
