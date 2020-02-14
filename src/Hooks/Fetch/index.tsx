@@ -20,6 +20,18 @@ const Fetch: React.SFC<FetchProps> = () => {
 
   return (
     <div>
+      <h1>Fetcher</h1>
+      <ul>
+        <li>
+          useEffect hook to handle an async call side-effect when component
+          mounts, or when page changes.
+        </li>
+        <li>
+          useState - this handles the state for the items return from the fetch,
+          and the paging.
+        </li>
+      </ul>
+
       {items.map((i: any) => (
         <div>{i.name}</div>
       ))}
