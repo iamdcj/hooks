@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-import BasicToggle from "./Hooks/BasicToggle";
-import Counter from "./Hooks/Counter";
-import Fetch from "./Hooks/Fetch";
-import ReducerFetch from "./Hooks/ReducerFetch";
+import BasicToggle from "./Hooks/useState/BasicToggle";
+import Counter from "./Hooks/useState/Counter";
+import Fetch from "./Hooks/useEffect/Fetch";
+import ReducerFetch from "./Hooks/useReducer/Fetch";
 
 const App = () => {
   return (

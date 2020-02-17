@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 export interface FetchProps {}
 
 const Fetch: React.SFC<FetchProps> = () => {
-  const [items, setItems] = useState([]);
+  const [state, setItems] = useState({ items: [] });
   const [page, setPage] = useState(1);
 
   const fetchItems = (p: number) => {
     fetch(`http://5e3f3b0364c3f6001455102a.mockapi.io/v0/comments${p}`)
       .then(response => response.json())
       .then(todos => {
-        setItems(todos);
+        setItems({ items: todos });
       });
   };
 
@@ -18,10 +18,14 @@ const Fetch: React.SFC<FetchProps> = () => {
     fetchItems(page);
   }, [page]);
 
+  console.log(state);
+
   return (
-    <div>
-      <h1>Fetcher</h1>
-      <p>The following effects are used in this example:</p>
+    <section>
+      <header>
+        <h1>Fetcher</h1>
+        <p>The following effects are used in this example:</p>
+      </header>
       <ul>
         <li>
           useEffect hook to handle an async call side-effect when component
@@ -33,16 +37,18 @@ const Fetch: React.SFC<FetchProps> = () => {
         </li>
       </ul>
 
-      {items.map((i: any) => (
-        <div>{i.name}</div>
-      ))}
-      <button disabled={page === 1} onClick={() => setPage(1)}>
-        1
-      </button>
-      <button disabled={page === 2} onClick={() => setPage(2)}>
-        2
-      </button>
-    </div>
+      <div>
+        {state.items.map((i: any) => (
+          <li>{i.name}</li>
+        ))}
+        <button disabled={page === 1} onClick={() => setPage(1)}>
+          1
+        </button>
+        <button disabled={page === 2} onClick={() => setPage(2)}>
+          2
+        </button>
+      </div>
+    </section>
   );
 };
 
