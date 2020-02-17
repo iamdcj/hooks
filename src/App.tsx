@@ -1,10 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-import BasicToggle from "./Hooks/useState/BasicToggle";
-import Counter from "./Hooks/useState/Counter";
-import Fetch from "./Hooks/useEffect/Fetch";
-import ReducerFetch from "./Hooks/useReducer/Fetch";
+import UseState from "./Hooks/useState";
 
 const App = () => {
   return (
@@ -16,33 +13,14 @@ const App = () => {
           <h3>Hooks Navigation</h3>
           <ul>
             <li>
-              <Link to="/basic-toggle">Basic Toggle</Link>
-            </li>
-            <li>
-              <Link to="/counter">Counter</Link>
-            </li>
-            <li>
-              <Link to="/fetch">Fetch</Link>
-            </li>
-            <li>
-              <Link to="/reducer-fetch">Reducer Fetch</Link>
+              <Link to="/use-state">Use State</Link>
             </li>
           </ul>
         </nav>
 
         <Switch>
-          <Route path="/basic-toggle">
-            <BasicToggle />
-          </Route>
-          <Route path="/counter">
-            <Counter />
-          </Route>
-
-          <Route path="/fetch">
-            <Fetch />
-          </Route>
-          <Route path="/reducer-fetch">
-            <ReducerFetch />
+          <Route path="/use-state">
+            <UseState />
           </Route>
         </Switch>
       </main>
