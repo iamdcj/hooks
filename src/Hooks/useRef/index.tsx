@@ -16,7 +16,7 @@ const UseRef: React.SFC<UseRefProps> = () => {
             <Link to="/use-ref/dom">DOM</Link>
           </li>
           <li>
-            <Link to="/use-ref/prev-state">Use Ref</Link>
+            <Link to="/use-ref/prev-state">Previous State</Link>
           </li>
         </ul>
       </nav>
