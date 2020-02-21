@@ -8,7 +8,7 @@ export interface UseStateProps {}
 const UseState: React.SFC<UseStateProps> = () => {
   return (
     <div>
-      <h1>The useState Hook</h1>
+      <h1>The State Hook</h1>
       <nav>
         <h3>Hooks Navigation</h3>
         <ul>
