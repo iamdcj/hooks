@@ -5,6 +5,14 @@ export interface CounterProps {}
 const Counter: React.SFC<CounterProps> = () => {
   let [count, updateCount] = useState(0);
 
+  const policeCount = (count: number) => {
+    if (count < 0) {
+      updateCount(0);
+    } else {
+      updateCount(count);
+    }
+  };
+
   return (
     <div>
       <h1>Counter</h1>
@@ -13,8 +21,8 @@ const Counter: React.SFC<CounterProps> = () => {
         <li>useState - this handles the state for the count value.</li>
       </ul>
       <span>{count}</span>
-      <button onClick={() => updateCount(count + 1)}>+</button>
-      <button onClick={() => updateCount(count - 1)}>-</button>
+      <button onClick={() => policeCount(count + 1)}>+</button>
+      <button onClick={() => policeCount(count - 1)}>-</button>
     </div>
   );
 };
